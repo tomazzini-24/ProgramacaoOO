@@ -1,0 +1,66 @@
+package loja;
+
+public class Product {
+
+
+
+	private String produto;
+	private double preco;
+	private int quantidade;
+	
+	Product (String produto, double preco, int quantidade) {
+	    this.produto = produto;
+	    this.preco = preco;
+	    this.quantidade = quantidade;
+	  }
+	
+	public String getProduto() {
+		return produto;
+	}
+
+	public void setProduto(String produto) {
+		this.produto = produto;
+	}
+	
+	public Double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+	
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+   public Product (double preco) {
+		
+	}
+   
+   public Product () {
+		
+  	}
+   
+   public void valorComissao(double preco) {
+
+		// System.out.println("Quando a pessoa for aluno, custo de R$ " + copia + " por
+		// cópia; se for professor custo de R$" + copia + " por cópia.");
+
+	}
+   
+   public  double estoque(){
+	   return  4618.30 * 44 ;
+  	}
+  	
+
+	 @Override
+	    public String toString() {
+	        return  " - Produto: " + produto + " - preço: " + preco +  " - quantidade: " + quantidade + "\n\n";
+	    }
+
+}

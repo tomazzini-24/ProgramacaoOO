@@ -1,0 +1,52 @@
+package loja;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class Program {
+
+	public static void main(String[] args) {
+			
+	        Collection<String> ListaVendedores = new ArrayList<>();
+	        ListaVendedores.add("Cezar");
+	        ListaVendedores.add("Marina");
+	        ListaVendedores.add("Juliana");
+	        System.out.println("Vendedores: " + ListaVendedores);
+	        System.out.println();
+	        System.out.println("----------------------------------------------------------------------------------");
+	        
+	        System.out.println("Catalogo interno de produtos:\n");
+	        
+	        List<Product> lista = new ArrayList<Product>();
+	        Product a = new Product("Notbook HP 16", 2549.50, 7);
+	        Product b = new Product("TV LED 43", 1599.90, 12);
+	        Product c = new Product("HD Externo 1TB", 468.90, 25);
+	        lista.add(a);
+	        lista.add(b);
+	        lista.add(c);
+	        System.out.println(lista);
+	        Product product = new Product();
+		     System.out.println("\nValor em estoque: " + String.format("%.2f",product.estoque()));
+	        System.out.println("----------------------------------------------------------------------------------\n");
+	        System.out.println("\nPesquisar produto especifico: \n" + lista.get(1).toString());
+	        System.out.println();
+	        System.out.println("----------------------------------------------------------------------------------\n");
+	        
+	      Salespeople vendedor = new Salespeople();
+	      vendedor.setNomeVendedor("Cezar");
+	      vendedor.setComissao(3);
+	      vendedor.setPreco(1599.90);
+	      vendedor.setProduto("TV LED 43");
+	      
+	      System.out.printf("Vendido o produto : " + vendedor.getProduto() + " no valor de: " + String.format("%.2f", vendedor.getPreco())+ " sobre comissão de "+ vendedor.getComissao() + " Porcento");
+	      System.out.println("\nValor Comissão: "+String.format("%.2f", vendedor.getCalcularComissao()) + " Vendedor - " +vendedor.getNomeVendedor());
+	        System.out.println("----------------------------------------------------------------------------------");
+	
+      
+	}
+
+
+	   
+
+}

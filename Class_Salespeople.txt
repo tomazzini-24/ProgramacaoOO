@@ -1,0 +1,42 @@
+package loja;
+
+public class Salespeople extends Product{
+
+	
+	private String nomevendedor;
+	private int comissao;
+	
+	public Salespeople(){
+		
+	}
+
+	public String getNomeVendedor() {
+		return nomevendedor;
+	}
+
+	public void setNomeVendedor(String nomevendedor) {
+		this.nomevendedor = nomevendedor;
+	}
+	public int getComissao() {
+		return comissao;
+	}
+
+	public void setComissao(int comissao) {
+		this.comissao = comissao;
+	}
+	
+	  public Salespeople(double preco){
+	    super(preco);
+	  }
+	
+	public Double getCalcularComissao() {
+		return (super.getPreco() * comissao) / 100;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return super.toString();
+	}
+}
+
